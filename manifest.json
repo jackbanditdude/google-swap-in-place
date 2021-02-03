@@ -1,0 +1,21 @@
+{
+    "name": "Google Account Swap-in-Place",
+    "version": "0.0.0.1",
+    "manifest_version": 2,
+    "description": "A Chromium-based extension to not open new tabs when changing Google accounts. Instead the current tab will change to reflect the selected account.",
+    "icons": {
+        "16": "icons/gasip16.png",
+        "32": "icons/gasip32.png",
+        "48": "icons/gasip48.png",
+        "128": "icons/gasip128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.google.com/*"
+            ],
+            "js": ["lib/jquery.min.js","content-scripts/content.js"],
+            "all_frames": true
+        }
+    ]
+}
